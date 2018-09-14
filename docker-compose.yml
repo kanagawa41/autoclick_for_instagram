@@ -1,0 +1,18 @@
+version: '2'
+services:
+  batch:
+    build: .
+    container_name: "c_chromium"
+    # env_file: .env
+    working_dir: /home/app
+    volumes:
+      - .:/home/app
+      - /home/app/node_modules # コンテナ内のnode_moduleをvolumesに登録
+    # FIXME: 実行されてない？
+    # command: npm install --prefix ../
+    ports:
+      - "5000:5000"
+    entrypoint:
+      - npm
+      - run
+      - api_app

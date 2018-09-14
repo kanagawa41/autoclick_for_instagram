@@ -1,17 +1,27 @@
 {
-  "name": "hlchrome",
+  "name": "ChromeHeadless",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "api_app": "node lib/api_app.js",
+    "task": "node lib/task.js",
+    "db_migrate": "node lib/task.js update_db"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "add": "^2.0.6",
-    "child_process": "^1.0.2",
-    "chrome-remote-interface": "^0.23.2",
-    "lighthouse": "^2.1.0"
+    "@slack/client": "^4.3.1",
+    "async": "^2.6.1",
+    "chrome-launcher": "^0.3.2",
+    "chrome-remote-interface": "^0.25.6",
+    "date-utils": "^1.2.21",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "log4js": "^2.8.0",
+    "pug": "^2.0.3",
+    "puppeteer": "^1.3.0",
+    "sequelize": "^4.37.10",
+    "sqlite3": "^4.0.0"
   }
 }

@@ -1,0 +1,8 @@
+html
+  head
+    title!= title
+  body
+    div(style={ "padding": "1em", "line-height": "1.5em", "background-color": "#343434", "color": "#fff"})!= message
+    script(type='text/javascript').
+      // リロード
+      setTimeout("location.reload()",1000 * 30);
